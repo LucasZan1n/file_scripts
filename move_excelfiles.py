@@ -15,18 +15,20 @@ def check_files(directory):
 		dp.append(dirpath)
 		dn.append(dirnames)
 
-downloads = "C:\\Users\\User\\Downloads\\"
-dest_dir = "C:\\Users\\User\\Downloads\\excel_files\\"
+downloads = "C:\\Users\\duits\\Downloads\\"
+dest_dir = "C:\\Users\\duits\\Downloads\\excel_files\\"
+file_type = ".xlsx"
 
 check_files(downloads)
 
 excel_f = []
 
-for file in f[0]:
-	if str(file).endswith(".xlsx"):
-		excel_f.append(file)
-	else:
-		continue
+if __name__ == "__main__":
+	for file in f[0]:
+		if str(file).endswith(filetype):
+			excel_f.append(file)
+		else:
+			continue
 
-for excelfile in excel_f:
-	move_file((downloads + excelfile), (dest_dir + excelfile))
+	for excelfile in excel_f:
+		move_file((downloads + excelfile), (dest_dir + excelfile))
